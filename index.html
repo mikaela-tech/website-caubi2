@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAUBI - Kerupuk Jantung Pisang & Bumbu Kulit Udang Khas Pangandaran</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        purple: {
+                            900: '#3B185F',
+                            950: '#260B42',
+                        },
+                        amber: {
+                            50: '#FDFBF7',
+                            100: '#F7F2E6',
+                        },
+                        orange: {
+                            500: '#FF6B00',
+                            600: '#E05D00',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-amber-50 text-amber-950 font-sans antialiased selection:bg-orange-500 selection:text-white">
+
+    <!-- NAVBAR -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-purple-950/95 backdrop-blur-md border-b border-purple-900 shadow-lg transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand Logo -->
+                <a href="#beranda" class="flex items-center space-x-3 group">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-orange-500 to-amber-400 flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
+                        <i class="fa-solid fa-leaf text-white text-lg"></i>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-2xl font-extrabold tracking-wider text-white">CAUBI</span>
+                        <span class="text-[10px] text-amber-200 tracking-widest uppercase font-medium">Pangandaran</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#beranda" class="text-amber-100 hover:text-orange-500 font-medium transition-colors">Beranda</a>
+                    <a href="#tentang" class="text-amber-100 hover:text-orange-500 font-medium transition-colors">Tentang</a>
+                    <a href="#keunggulan" class="text-amber-100 hover:text-orange-500 font-medium transition-colors">Keunggulan</a>
+                    <a href="#proses" class="text-amber-100 hover:text-orange-500 font-medium transition-colors">Proses</a>
+                    <a href="#pemesanan" class="text-amber-100 hover:text-orange-500 font-medium transition-colors">Pemesanan</a>
+                </div>
+
+                <!-- Desktop CTA Button -->
+                <div class="hidden md:block">
+                    <a href="https://wa.me/62888888" target="_blank" class="bg-orange-500 hover:bg-orange-600 text-white font-bold px-5 py-2.5 rounded-full shadow-lg hover:shadow-orange-500/30 transition-all duration-300 flex items-center space-x-2">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Pesan via WA (0888888)</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-amber-100 hover:text-orange-500 focus:outline-none p-2">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-purple-950 border-b border-purple-900 px-4 pt-2 pb-6 space-y-3">
+            <a href="#beranda" class="block text-amber-100 hover:text-orange-500 font-medium py-2 border-b border-purple-900/50">Beranda</a>
+            <a href="#tentang" class="block text-amber-100 hover:text-orange-500 font-medium py-2 border-b border-purple-900/50">Tentang</a>
+            <a href="#keunggulan" class="block text-amber-100 hover:text-orange-500 font-medium py-2 border-b border-purple-900/50">Keunggulan</a>
+            <a href="#proses" class="block text-amber-100 hover:text-orange-500 font-medium py-2 border-b border-purple-900/50">Proses</a>
+            <a href="#pemesanan" class="block text-amber-100 hover:text-orange-500 font-medium py-2 border-b border-purple-900/50">Pemesanan</a>
+            <div class="pt-2">
+                <a href="https://wa.me/62888888" target="_blank" class="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold px-5 py-3 rounded-xl shadow-md flex items-center justify-center space-x-2">
+                    <i class="fa-brands fa-whatsapp text-xl"></i>
+                    <span>Pesan via WA (0888888)</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="beranda" class="relative pt-32 pb-20 md:pt-44 md:pb-32 bg-gradient-to-b from-purple-950 via-purple-900 to-purple-950 text-white overflow-hidden">
+        <!-- Background Decorative Blur Elements -->
+        <div class="absolute top-1/4 left-10 w-72 h-72 bg-orange-500/10 rounded-full filter blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-10 right-10 w-96 h-96 bg-purple-600/20 rounded-full filter blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <!-- Badge -->
+                    <div class="inline-flex items-center space-x-2 bg-orange-500/20 border border-orange-500/30 text-orange-400 px-4 py-2 rounded-full text-sm font-semibold tracking-wide">
+                        <span>🌿</span>
+                        <span>Inovasi Upcycling Food Khas Pesisir Pangandaran</span>
+                    </div>
+                    
+                    <!-- Headline -->
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                        Cita Rasa Otentik Pangandaran: <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-300">Kerupuk Jantung Pisang & Bumbu Alami Kulit Udang!</span>
+                    </h1>
+
+                    <!-- Sub-headline -->
+                    <p class="text-lg sm:text-xl text-amber-100/90 font-light max-w-2xl mx-auto lg:mx-0">
+                        Camilan tinggi serat, kaya antioksidan, dan gurih alami umami — renyah di lidah, baik untuk tubuh, dan ramah lingkungan.
+                    </p>
+
+                    <!-- Button CTA -->
+                    <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="https://wa.me/62888888" target="_blank" class="w-full sm:w-auto bg-orange-500 hover:bg-orange-600 text-white font-extrabold text-lg px-8 py-4 rounded-full shadow-xl hover:shadow-orange-500/40 hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center space-x-3">
+                            <i class="fa-brands fa-whatsapp text-2xl"></i>
+                            <span>Pesan via WhatsApp Sekarang</span>
+                        </a>
+                        <a href="#tentang" class="w-full sm:w-auto bg-white/10 hover:bg-white/20 text-amber-100 font-semibold px-6 py-4 rounded-full border border-white/20 transition-all duration-300 flex items-center justify-center space-x-2">
+                            <span>Pelajari Lebih Lanjut</span>
+                            <i class="fa-solid fa-arrow-down text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Image / Visual Mockup -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-full max-w-md">
+                        <div class="absolute -inset-1 bg-gradient-to-r from-orange-500 to-purple-600 rounded-3xl blur-lg opacity-30 animate-pulse"></div>
+                        <div class="relative bg-purple-900 border border-purple-800 rounded-3xl p-6 shadow-2xl text-center space-y-6">
+                            <div class="w-full h-64 sm:h-72 rounded-2xl bg-gradient-to-br from-amber-900/40 to-purple-950 flex flex-col items-center justify-center border border-purple-800/60 overflow-hidden relative group">
+                                <img src="https://placehold.co/600x400/3B185F/FF6B00?text=CAUBI+Pangandaran" alt="Produk CAUBI" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/3B185F/FFF?text=CAUBI+Snack'">
+                                <div class="absolute inset-0 bg-black/30 flex items-center justify-center">
+                                    <div class="bg-orange-500 text-white px-4 py-2 rounded-full font-bold shadow-lg text-sm flex items-center space-x-2">
+                                        <i class="fa-solid fa-award"></i>
+                                        <span>100% Produk Lokal Unggulan</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-3 gap-2 text-center">
+                                <div class="bg-purple-950/60 p-3 rounded-xl border border-purple-800">
+                                    <div class="text-orange-400 font-bold text-lg">Tinggi</div>
+                                    <div class="text-xs text-amber-200">Serat Pangan</div>
+                                </div>
+                                <div class="bg-purple-950/60 p-3 rounded-xl border border-purple-800">
+                                    <div class="text-orange-400 font-bold text-lg">Umami</div>
+                                    <div class="text-xs text-amber-200">Kulit Udang</div>
+                                </div>
+                                <div class="bg-purple-950/60 p-3 rounded-xl border border-purple-800">
+                                    <div class="text-orange-400 font-bold text-lg">Zero</div>
+                                    <div class="text-xs text-amber-200">Waste Food</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STORYTELLING / ABOUT SECTION -->
+    <section id="tentang" class="py-20 bg-amber-50 relative">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl p-8 sm:p-12 shadow-xl border border-amber-100 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-48 h-48 bg-orange-500/5 rounded-full filter blur-2xl"></div>
+                
+                <div class="text-center max-w-3xl mx-auto space-y-4 mb-10">
+                    <span class="text-orange-500 font-bold tracking-widest uppercase text-sm">Dari Kekayaan Bahari & Agrikultur Pangandaran</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-purple-950">Lahirlah CAUBI: Inovasi Pangan Berkelanjutan!</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                    <div class="md:col-span-5">
+                        <div class="rounded-2xl overflow-hidden shadow-md border border-amber-100">
+                            <img src="https://placehold.co/500x600/F7F2E6/3B185F?text=Pangandaran+Nature" alt="Pangandaran Alam" class="w-full h-auto object-cover hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/500x600/3B185F/FFF?text=Pangandaran'">
+                        </div>
+                    </div>
+                    <div class="md:col-span-7 space-y-6 text-amber-950/90 text-lg leading-relaxed font-normal">
+                        <p>
+                            Pangandaran tidak hanya terkenal dengan pesona pantai dan cagar alamnya. Kami mengolah jantung pisang dari perkebunan lokal dan kulit udang segar hasil tangkapan nelayan Pangandaran menjadi camilan bernilai gizi tinggi.
+                        </p>
+                        <p class="font-semibold text-purple-900 bg-amber-100/60 p-4 rounded-xl border-l-4 border-orange-500">
+                            CAUBI menyulap limbah pertanian & perikanan menjadi kelezatan premium bernutrisi tinggi yang ramah lingkungan.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURE / KEUNGGULAN SECTION -->
+    <section id="keunggulan" class="py-20 bg-stone-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <span class="text-orange-500 font-bold tracking-widest uppercase text-sm">Keunggulan Produk</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-purple-950">Kenapa Harus Memilih CAUBI?</h2>
+                <p class="text-amber-950/70">Kombinasi sempurna antara kesehatan tubuh dan kelestarian alam pesisir Pangandaran.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-3xl p-8 shadow-lg border border-amber-100 flex flex-col justify-between hover:-translate-y-1 transition-all duration-300">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-orange-500/10 text-orange-500 flex items-center justify-center text-2xl font-bold mb-6">
+                            <i class="fa-solid fa-heart-pulse"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-purple-950 mb-4">1. Nutrisi Tinggi & Baik untuk Kesehatan</h3>
+                        <ul class="space-y-3 text-amber-950/80">
+                            <li class="flex items-start space-x-3">
+                                <i class="fa-solid fa-check text-orange-500 mt-1"></i>
+                                <span><strong>Tinggi Serat Pangan</strong> (baik untuk pencernaan & kenyang lebih lama)</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <i class="fa-solid fa-check text-orange-500 mt-1"></i>
+                                <span><strong>Indeks Glikemik Rendah</strong> (aman untuk pembatasan gula)</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <i class="fa-solid fa-check text-orange-500 mt-1"></i>
+                                <span><strong>Kaya Antioksidan & Mineral</strong> (flavonoid, polifenol, kalium, zat besi, fosfor, kalsium)</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <i class="fa-solid fa-check text-orange-500 mt-1"></i>
+                                <span><strong>Bebas Kolesterol</strong> (murni berbahan dasar nabati alami)</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mt-8 pt-4 border-t border-amber-100/60 text-xs font-semibold text-purple-900 uppercase tracking-wider">
+                        Sehat & Bergizi
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white rounded-3xl p-8 shadow-lg border border-amber-100 flex flex-col justify-between hover:-translate-y-1 transition-all duration-300">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-purple-900/10 text-purple-900 flex items-center justify-center text-2xl font-bold mb-6">
+                            <i class="fa-solid fa-recycle"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-purple-950 mb-4">2. Keunggulan Produksi & Zero Waste</h3>
+                        <ul class="space-y-3 text-amber-950/80">
+                            <li class="flex items-start space-x-3">
+                                <i class="fa-solid fa-check text-orange-500 mt-1"></i>
+                                <span><strong>Pemanfaatan Limbah Pertanian & Bahari</strong> (Upcycling food jantung pisang & kulit udang)</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <i class="fa-solid fa-check text-orange-500 mt-1"></i>
+                                <span><strong>Bumbu Udang Gurih Alami</strong> (ekstraksi kulit udang berkualitas, aroma umami khas Pangandaran)</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <i class="fa-solid fa-check text-orange-500 mt-1"></i>
+                                <span><strong>Pasokan Melimpah & Berkelanjutan</strong> (menggunakan hasil bumi & pesisir lokal sepanjang tahun)</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mt-8 pt-4 border-t border-amber-100/60 text-xs font-semibold text-purple-900 uppercase tracking-wider">
+                        Ramah Lingkungan
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white rounded-3xl p-8 shadow-lg border border-amber-100 flex flex-col justify-between hover:-translate-y-1 transition-all duration-300">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-orange-500/10 text-orange-500 flex items-center justify-center text-2xl font-bold mb-6">
+                            <i class="fa-solid fa-medal"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-purple-950 mb-4">3. Daya Saing & Cita Rasa Otentik</h3>
+                        <ul class="space-y-3 text-amber-950/80">
+                            <li class="flex items-start space-x-3">
+                                <i class="fa-solid fa-check text-orange-500 mt-1"></i>
+                                <span><strong>Renyah & Khas</strong> (tekstur crispy khas serat alami)</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <i class="fa-solid fa-check text-orange-500 mt-1"></i>
+                                <span><strong>Oleh-Oleh Khas Pangandaran</strong> (camilan sehat & unik bernilai sosial tinggi)</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mt-8 pt-4 border-t border-amber-100/60 text-xs font-semibold text-purple-900 uppercase tracking-wider">
+                        Kelezatan Premium
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROSES PEMBUATAN SECTION -->
+    <section id="proses" class="py-20 bg-amber-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <span class="text-orange-500 font-bold tracking-widest uppercase text-sm">Proses Pembuatan</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-purple-950">Empat Langkah Sederhana Menuju Kelezatan CAUBI</h2>
+                <p class="text-amber-950/70">Dibuat dengan standar higienis dan higienis untuk menjaga mutu dan kandungan gizinya.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Step 1 -->
+                <div class="bg-white rounded-2xl p-6 shadow-md border border-amber-100 relative group hover:border-orange-500 transition-colors">
+                    <div class="absolute -top-4 -left-4 w-10 h-10 bg-orange-500 text-white font-extrabold rounded-full flex items-center justify-center shadow-md">1</div>
+                    <div class="pt-4 space-y-3">
+                        <div class="text-purple-900 font-bold text-lg">Seleksi Bahan Lokal</div>
+                        <p class="text-amber-950/70 text-sm">Jantung pisang segar dan kulit udang dari tangkapan nelayan dibersihkan secara higienis.</p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="bg-white rounded-2xl p-6 shadow-md border border-amber-100 relative group hover:border-orange-500 transition-colors">
+                    <div class="absolute -top-4 -left-4 w-10 h-10 bg-orange-500 text-white font-extrabold rounded-full flex items-center justify-center shadow-md">2</div>
+                    <div class="pt-4 space-y-3">
+                        <div class="text-purple-900 font-bold text-lg">Formulasi Bumbu</div>
+                        <p class="text-amber-950/70 text-sm">Jantung pisang dihaluskan, dicampur tepung tapioka, dan dipadu bumbu gurih ekstraksi kulit udang.</p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="bg-white rounded-2xl p-6 shadow-md border border-amber-100 relative group hover:border-orange-500 transition-colors">
+                    <div class="absolute -top-4 -left-4 w-10 h-10 bg-orange-500 text-white font-extrabold rounded-full flex items-center justify-center shadow-md">3</div>
+                    <div class="pt-4 space-y-3">
+                        <div class="text-purple-900 font-bold text-lg">Pengukusan & Pengeringan</div>
+                        <p class="text-amber-950/70 text-sm">Dikukus presisi, diiris tipis, lalu dikeringkan di bawah sinar matahari alami.</p>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="bg-white rounded-2xl p-6 shadow-md border border-amber-100 relative group hover:border-orange-500 transition-colors">
+                    <div class="absolute -top-4 -left-4 w-10 h-10 bg-orange-500 text-white font-extrabold rounded-full flex items-center justify-center shadow-md">4</div>
+                    <div class="pt-4 space-y-3">
+                        <div class="text-purple-900 font-bold text-lg">Penggorengan & Pengemasan</div>
+                        <p class="text-amber-950/70 text-sm">Digoreng hingga renyah keemasan, menghasilkan kerupuk berkualitas tinggi.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TARGET AUDIENS SECTION -->
+    <section class="py-20 bg-purple-950 text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#FF6B00_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <span class="text-orange-400 font-bold tracking-widest uppercase text-sm">Target Konsumen</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold">Cocok Untuk Siapa?</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Audience 1 -->
+                <div class="bg-purple-900/80 border border-purple-800 rounded-3xl p-8 text-center space-y-4 shadow-xl">
+                    <div class="w-16 h-16 bg-orange-500/20 text-orange-400 rounded-2xl mx-auto flex items-center justify-center text-3xl font-bold">
+                        <i class="fa-solid fa-person-running"></i>
+                    </div>
+                    <h3 class="text-xl font-bold">1. Pencinta Gaya Hidup Sehat</h3>
+                    <p class="text-amber-100/80 text-sm">Health-Conscious yang mencari camilan tinggi serat dan bebas kolesterol tanpa rasa bersalah.</p>
+                </div>
+
+                <!-- Audience 2 -->
+                <div class="bg-purple-900/80 border border-purple-800 rounded-3xl p-8 text-center space-y-4 shadow-xl">
+                    <div class="w-16 h-16 bg-orange-500/20 text-orange-400 rounded-2xl mx-auto flex items-center justify-center text-3xl font-bold">
+                        <i class="fa-solid fa-umbrella-beach"></i>
+                    </div>
+                    <h3 class="text-xl font-bold">2. Wisatawan & Pemburu Oleh-Oleh</h3>
+                    <p class="text-amber-100/80 text-sm">Pengunjung yang ingin membawa pulang cita rasa autentik khas Pangandaran yang unik & berkesan.</p>
+                </div>
+
+                <!-- Audience 3 -->
+                <div class="bg-purple-900/80 border border-purple-800 rounded-3xl p-8 text-center space-y-4 shadow-xl">
+                    <div class="w-16 h-16 bg-orange-500/20 text-orange-400 rounded-2xl mx-auto flex items-center justify-center text-3xl font-bold">
+                        <i class="fa-solid fa-earth-americas"></i>
+                    </div>
+                    <h3 class="text-xl font-bold">3. Penggemar Produk Ramah Lingkungan</h3>
+                    <p class="text-amber-100/80 text-sm">Masyarakat yang peduli pada konsep Zero Waste dan mendukung produk upcycling berkelanjutan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA SECTION -->
+    <section id="pemesanan" class="py-20 bg-gradient-to-br from-orange-500 to-amber-500 text-white relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6 relative z-10">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight">
+                Bawa Pulang Cita Rasa Sehat & Gurih Khas CAUBI!
+            </h2>
+            <p class="text-lg sm:text-xl text-amber-100 max-w-2xl mx-auto font-medium">
+                Dapatkan harga promosi khusus untuk pemesanan hari ini! Stok bahan segar terbatas setiap minggunya.
+            </p>
+            <div class="pt-4">
+                <a href="https://wa.me/62888888" target="_blank" class="inline-flex items-center space-x-3 bg-purple-950 hover:bg-purple-900 text-white font-extrabold text-lg px-8 py-4 rounded-full shadow-2xl hover:scale-105 transition-all duration-300">
+                    <i class="fa-brands fa-whatsapp text-2xl text-orange-400"></i>
+                    <span>👉 CHAT WHATSAPP: 0888888</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-purple-950 text-amber-100/80 py-12 border-t border-purple-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+            <div class="flex items-center justify-center space-x-3">
+                <div class="w-8 h-8 rounded-lg bg-orange-500 flex items-center justify-center">
+                    <i class="fa-solid fa-leaf text-white text-sm"></i>
+                </div>
+                <span class="text-xl font-extrabold tracking-wider text-white">CAUBI</span>
+            </div>
+            
+            <p class="max-w-xl mx-auto text-sm">
+                CAUBI — Inovasi Kerupuk Jantung Pisang & Bumbu Kulit Udang Khas Pangandaran.
+            </p>
+            
+            <div class="text-sm font-medium text-amber-200">
+                Layanan Pemesanan & Kemitraan WA: <span class="text-white font-bold">0888888</span>
+            </div>
+
+            <div class="pt-6 border-t border-purple-900/60 text-xs text-amber-100/50">
+                Copyright © 2026 CAUBI. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Script for Mobile Menu -->
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
